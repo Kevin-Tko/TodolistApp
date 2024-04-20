@@ -7,16 +7,19 @@ background_color = """
     <style>
         [data-teststate="notRunning"] {
         background-color:#15202b;
-        color:white;
         }
         [data-testid="StyledLinkIconContainer"] {
-        color:white;
+        color:#e6ffcc;
+        font-family:Garamond;
+        font-size:8;
         }
         [data-testid="stMarkdownContainer"] {
         color:white;
+        font-family:Garamond;
         }
         [data-testid="stHeader"] {
         background-color:#f5e6ff;
+        font-family:Garamond;
         }
     </style>
 """
@@ -30,9 +33,9 @@ def add_todo():
     st.session_state['new_todo'] = ''
 
 
-st.title('Elephant Man Todo App')
-st.subheader('This is a Todo App')
-st.write('This App will improve your productivity')
+st.title('Todo App - Organize Your Day 📝')
+st.subheader('Enter your todos through the text box & complete by ticking the checkbox')
+st.write('This App will improve your productivity & help you keep track of your daily activities')
 
 for index, todo in enumerate(todos):
     checkbox = st.checkbox(todo, key=todo)
